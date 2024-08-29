@@ -1,0 +1,40 @@
+<PROMPT>
+define the bool and operation based on Bool datatype.
+</PROMPT>
+
+<DEPS>
+Bool
+: *
+= #[]{
+  #t{} : Bool
+  #f{} : Bool
+}
+
+Bool
+: *
+= #[]{
+  #t{} : Bool
+  #f{} : Bool
+}
+</DEPS>
+
+<CORRECT_ANSWER>
+// Performs logical AND operation on two boolean values.
+// - a: The first boolean value.
+// - b: The second boolean value.
+// = True if both 'a' and 'b' are true, false otherwise.
+Bool/and
+: ∀(a: Bool)
+  ∀(b: Bool)
+  Bool
+= λ{
+  #t: λb
+    b
+  #f: λb
+    #f{}
+}
+</CORRECT_ANSWER>
+
+
+
+
